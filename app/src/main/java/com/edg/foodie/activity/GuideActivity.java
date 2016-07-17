@@ -14,6 +14,7 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 
+
 import com.edg.foodie.R;
 import com.edg.foodie.utils.PrefUtils;
 
@@ -43,6 +44,8 @@ public class GuideActivity extends AppCompatActivity {
 
         requestWindowFeature(Window.FEATURE_NO_TITLE) ;
         setContentView(R.layout.activity_guide);
+
+
 
         vp_guide = (ViewPager) findViewById(R.id.vp_guide);
         btn_start = (Button) findViewById(R.id.btn_start);

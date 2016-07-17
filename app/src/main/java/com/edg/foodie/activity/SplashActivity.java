@@ -13,6 +13,7 @@ import android.widget.RelativeLayout;
 
 import com.edg.foodie.R;
 import com.edg.foodie.utils.PrefUtils;
+import com.jaeger.library.StatusBarUtil;
 
 public class SplashActivity extends AppCompatActivity {
     private RelativeLayout rl_root;
@@ -28,9 +29,15 @@ public class SplashActivity extends AppCompatActivity {
         requestWindowFeature(Window.FEATURE_NO_TITLE) ;
         setContentView(R.layout.activity_splash);
 
+        setStatusBar() ;
+
         rl_root = (RelativeLayout) findViewById(R.id.rl_root);
 
         startAnim() ;
+    }
+    //沉浸式状态栏
+    protected void setStatusBar() {
+        StatusBarUtil.setColor(this, getResources().getColor(R.color.colorPrimary));
     }
 
     private void startAnim() {

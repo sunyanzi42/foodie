@@ -1,3 +1,20 @@
 <resources>
     <string name="app_name">Foodie</string>
+    <string name="home">外卖</string>
+    <string name="action_search">搜索</string>
+    <string name="open_drawer">抽屉打开了</string>
+    <string name="close_drawer">抽屉关闭了</string>
+
+    <string-array name="planets_array">
+        <item>账户信息</item>
+        <item>我的余额</item>
+        <item>我的收藏</item>
+        <item>服务中心</item>
+        <item>系统配置</item>
+        <item>夜间</item>
+    </string-array>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
 </resources>
