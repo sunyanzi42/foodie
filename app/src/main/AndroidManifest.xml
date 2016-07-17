@@ -17,7 +17,11 @@
         </activity>
         <activity android:name=".activity.GuideActivity" />
         <activity android:name=".activity.MainActivity" />
-        <activity android:name=".activity.AccountActivity"></activity>
+        <activity android:name=".activity.AccountActivity" />
+        <activity android:name=".activity.SettingActivity" />
+        <activity android:name=".activity.WalletActivity" />
+        <activity android:name=".activity.CollectActivity" />
+        <activity android:name=".activity.ServiceCenterActivity"></activity>
     </application>
 
 </manifest>
