@@ -22,7 +22,7 @@ import com.edg.foodie.fragment.FindFragment;
 import com.edg.foodie.fragment.HomeFragment;
 import com.edg.foodie.fragment.OrderFragment;
 
-public class MainActivity extends ActionBarActivity implements View.OnClickListener {
+public class MainActivity extends ActionBarActivity implements View.OnClickListener{
 
     private TextView txt_waimai;
     private TextView txt_find;
@@ -40,7 +40,6 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
     private ListView lvLeftMenu;
     private String[] lvs = {"账户信息", "我的余额", "我的收藏", "服务中心", "系统设置"};//可以放入String中，在拿取出来
     private ArrayAdapter arrayAdapter;
-
 
 
     @Override
@@ -81,6 +80,7 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
 
 
     }
+
 
     //UI组件初始化与事件绑定
     private void bindViews() {
