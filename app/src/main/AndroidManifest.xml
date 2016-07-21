@@ -2,17 +2,14 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.edg.foodie">
 
-
-    <!-- if you want to load images from the internet -->
     <uses-permission android:name="android.permission.INTERNET" />
-
-    <!-- if you want to load images from a file OR from the internet -->
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
+        android:name=".view.BaseApplication"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar">
         <activity android:name=".activity.SplashActivity">
@@ -28,7 +25,16 @@
         <activity android:name=".activity.SettingActivity" />
         <activity android:name=".activity.WalletActivity" />
         <activity android:name=".activity.CollectActivity" />
-        <activity android:name=".activity.ServiceCenterActivity"></activity>
+        <activity android:name=".activity.ServiceCenterActivity" />
+        <activity android:name=".controller.PromotionControllerActivity" />
+        <activity android:name=".controller.VipControllerActivity" />
+        <activity android:name=".controller.UnfinsheorderControllerActivity" />
+        <activity android:name=".controller.FinshorderConntrollerActivity" />
+        <activity android:name=".controller.BoutiqueActivity" />
+        <activity android:name=".controller.ConvenienceStoreActivity" />
+        <activity android:name=".controller.NewStoreActivity" />
+        <activity android:name=".controller.FavoriteActivity" />
+        <activity android:name=".controller.CleanCacheActivity" />
     </application>
 
 </manifest>

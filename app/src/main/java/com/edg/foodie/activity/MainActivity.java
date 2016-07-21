@@ -54,7 +54,7 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
 
 
         findViews(); //获取控件
-        toolbar.setTitle("我的");//设置Toolbar标题
+        toolbar.setTitle("Foodie");//设置Toolbar标题
         toolbar.setTitleTextColor(Color.parseColor("#000000")); //设置标题颜色
         //创建返回键，并实现打开关/闭监听
         mDrawerToggle = new ActionBarDrawerToggle(this, mDrawerLayout, toolbar,

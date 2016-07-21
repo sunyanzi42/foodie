@@ -11,28 +11,12 @@
         android:layout_width="match_parent"
         android:layout_height="180dp"
         >
-        <!--<android.support.v4.view.ViewPager-->
-            <!--android:id="@+id/vp_hotImage"-->
-            <!--android:layout_width="match_parent"-->
-            <!--android:layout_height="match_parent"-->
-            <!--android:background="@color/colorPrimary" />-->
 
         <com.jude.rollviewpager.RollPagerView
             android:id="@+id/roll_view_pager"
             android:layout_width="match_parent"
             android:layout_height="180dp"
             app:rollviewpager_play_delay="3000"/>
-
-        <LinearLayout
-            android:id="@+id/ll_hotImage_indicator"
-            android:layout_width="wrap_content"
-            android:layout_height="20dp"
-            android:layout_gravity="bottom|right"
-            android:layout_marginBottom="5dp"
-            android:layout_marginRight="10dp"
-            android:layout_marginTop="5dp"
-            android:gravity="center"
-            android:orientation="horizontal" />
 
 
     </RelativeLayout>
@@ -52,26 +36,26 @@
             >
 
             <Button
+                android:id="@+id/btn_boutique"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:background="@color/text_yellow"
                 android:text="精品美食"
                 />
 
             <Button
+                android:id="@+id/btn_convenience"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:background="@color/text_yellow"
                 android:text="便利店"
                 />
 
             <Button
+                android:id="@+id/btn_new_store"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:background="@color/text_yellow"
                 android:text="新店特惠"
                 />
 
@@ -84,12 +68,25 @@
             android:background="@drawable/list_devider" >
         </View>
 
-        <ListView
-            android:id="@+id/transformers"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent">
 
-        </ListView>
+        <Button
+            android:id="@+id/btn_HttpTest"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="能行？"
+            android:layout_centerInParent="true"
+            />
+
+        <!--<ListView-->
+            <!--android:id="@+id/lv_food_list"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content">-->
+
+        <!--</ListView>-->
+        </RelativeLayout>
     </RelativeLayout>
 
 </FrameLayout>
