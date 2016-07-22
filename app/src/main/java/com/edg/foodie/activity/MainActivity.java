@@ -4,11 +4,15 @@ import android.app.FragmentTransaction;
 import android.content.Intent;
 import android.graphics.Color;
 import android.support.v4.widget.DrawerLayout;
+import android.app.ActionBar;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.widget.Toolbar;
 import android.view.KeyEvent;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -41,6 +45,8 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
     private String[] lvs = {"账户信息", "我的余额", "我的收藏", "服务中心", "系统设置"};//可以放入String中，在拿取出来
     private ArrayAdapter arrayAdapter;
 
+    private ActionBar actionBar ;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -55,7 +61,8 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
 
         findViews(); //获取控件
         toolbar.setTitle("Foodie");//设置Toolbar标题
-        toolbar.setTitleTextColor(Color.parseColor("#000000")); //设置标题颜色
+        toolbar.setTitleTextColor(Color.parseColor("#FFFFFF")); //设置标题颜色
+        actionBar= getActionBar();
         //创建返回键，并实现打开关/闭监听
         mDrawerToggle = new ActionBarDrawerToggle(this, mDrawerLayout, toolbar,
                 R.string.open_drawer, R.string.close_drawer) {
@@ -70,7 +77,7 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
         };
         mDrawerToggle.syncState();
         mDrawerLayout.setDrawerListener(mDrawerToggle);
-        //设置菜单列表
+        //设置菜单列表,写一个listView布局将其优化
         arrayAdapter = new ArrayAdapter(this, android.R.layout.simple_list_item_1, lvs);
         lvLeftMenu.setAdapter(arrayAdapter);
 
@@ -81,6 +88,20 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
 
     }
 
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater inflater = new MenuInflater(this) ;
+        inflater.inflate(R.menu.activity_main,menu);
+        return super.onCreateOptionsMenu(menu);
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        if (item.isCheckable()){
+            item.setChecked(true);
+        }
+        return super.onOptionsItemSelected(item);
+    }
 
     //UI组件初始化与事件绑定
     private void bindViews() {
@@ -191,7 +212,6 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
      * 获取控件
      */
     private void findViews() {
-//        ivRunningMan = (ImageView) findViewById(R.id.iv_main);
         toolbar = (Toolbar) findViewById(R.id.tl_custom);
         mDrawerLayout = (DrawerLayout) findViewById(R.id.dl_left);
         lvLeftMenu = (ListView) findViewById(R.id.lv_left_menu);

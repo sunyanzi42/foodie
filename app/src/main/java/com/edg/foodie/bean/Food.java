@@ -1,5 +1,7 @@
 package com.edg.foodie.bean;
 
+import java.util.ArrayList;
+
 /**
  * 作者：Aller  2016/7/20 09:24
  *
@@ -11,7 +13,14 @@ public class Food {
     private int id;
     private String name;//名称
     private String img;//图片
-    private int count ;//访问次数
+    private String count ;//访问次数
+
+    public Food(int id, String name, String img, String count) {
+        this.id = id;
+        this.name = name;
+        this.img = img;
+        this.count = count;
+    }
 
     public int getId() {
         return id;
@@ -37,11 +46,11 @@ public class Food {
         this.img = img;
     }
 
-    public int getCount() {
+    public String getCount() {
         return count;
     }
 
-    public void setCount(int count) {
+    public void setCount(String count) {
         this.count = count;
     }
 

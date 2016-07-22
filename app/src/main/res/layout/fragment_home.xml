@@ -5,9 +5,9 @@
     android:layout_height="match_parent"
     tools:context="com.edg.foodie.fragment.HomeFragment">
 
-
     <!--ViewPager 热门图片展示-->
     <RelativeLayout
+        android:id="@+id/rl_top"
         android:layout_width="match_parent"
         android:layout_height="180dp"
         >
@@ -22,6 +22,7 @@
     </RelativeLayout>
 
     <RelativeLayout
+        android:id="@+id/rl_center"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="180dp"
@@ -62,31 +63,22 @@
 
         </LinearLayout>
         <View
+            android:id="@+id/view"
             android:layout_width="match_parent"
             android:layout_height="0.2dip"
             android:layout_below="@id/ll_centerButton"
             android:background="@drawable/list_devider" >
         </View>
 
-        <RelativeLayout
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent">
 
-        <Button
-            android:id="@+id/btn_HttpTest"
+        <ListView
+            android:id="@+id/lv_food_list"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="能行？"
-            android:layout_centerInParent="true"
-            />
+            android:layout_height="match_parent"
+            android:layout_below="@id/view"
 
-        <!--<ListView-->
-            <!--android:id="@+id/lv_food_list"-->
-            <!--android:layout_width="match_parent"-->
-            <!--android:layout_height="wrap_content">-->
+            >
 
-        <!--</ListView>-->
-        </RelativeLayout>
+        </ListView>
     </RelativeLayout>
-
 </FrameLayout>
